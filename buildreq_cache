@@ -1,0 +1,9 @@
+2.0.0
+pypi(jinja2)
+pypi(numpy)
+pypi(packaging)
+pypi(pillow)
+pypi(python_dateutil)
+pypi(pyyaml)
+pypi(tornado)
+pypi(typing_extensions)
