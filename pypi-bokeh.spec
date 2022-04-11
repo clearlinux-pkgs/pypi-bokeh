@@ -4,7 +4,7 @@
 #
 Name     : pypi-bokeh
 Version  : 2.4.2
-Release  : 49
+Release  : 50
 URL      : https://files.pythonhosted.org/packages/8d/45/723c63620c66e953046d351c599ea14fae6f4d3a5c3af0c952846197b019/bokeh-2.4.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/8d/45/723c63620c66e953046d351c599ea14fae6f4d3a5c3af0c952846197b019/bokeh-2.4.2.tar.gz
 Summary  : Interactive plots and applications in the browser from Python
@@ -80,7 +80,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1642003684
+export SOURCE_DATE_EPOCH=1649721206
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
