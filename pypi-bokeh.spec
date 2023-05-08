@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-bokeh
-Version  : 3.1.0
-Release  : 64
-URL      : https://files.pythonhosted.org/packages/6e/38/5a1f503b5b871f0ecf7f0d72a8c7a2f466f39c698c9b5181c6b8c9a37c8c/bokeh-3.1.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/6e/38/5a1f503b5b871f0ecf7f0d72a8c7a2f466f39c698c9b5181c6b8c9a37c8c/bokeh-3.1.0.tar.gz
+Version  : 3.1.1
+Release  : 65
+URL      : https://files.pythonhosted.org/packages/03/5d/978f7a4824d26f9f729347142d01bc4bf12e49027d96163d9b428a9aabda/bokeh-3.1.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/03/5d/978f7a4824d26f9f729347142d01bc4bf12e49027d96163d9b428a9aabda/bokeh-3.1.1.tar.gz
 Summary  : Interactive plots and applications in the browser from Python
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -17,17 +17,8 @@ Requires: pypi-bokeh-python = %{version}-%{release}
 Requires: pypi-bokeh-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 BuildRequires : pypi(colorama)
-BuildRequires : pypi(contourpy)
-BuildRequires : pypi(jinja2)
-BuildRequires : pypi(numpy)
-BuildRequires : pypi(packaging)
-BuildRequires : pypi(pandas)
-BuildRequires : pypi(pillow)
-BuildRequires : pypi(pyyaml)
 BuildRequires : pypi(setuptools)
 BuildRequires : pypi(setuptools_git_versioning)
-BuildRequires : pypi(tornado)
-BuildRequires : pypi(xyzservices)
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -84,10 +75,10 @@ python3 components for the pypi-bokeh package.
 
 
 %prep
-%setup -q -n bokeh-3.1.0
-cd %{_builddir}/bokeh-3.1.0
+%setup -q -n bokeh-3.1.1
+cd %{_builddir}/bokeh-3.1.1
 pushd ..
-cp -a bokeh-3.1.0 buildavx2
+cp -a bokeh-3.1.1 buildavx2
 popd
 
 %build
@@ -95,15 +86,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679325920
+export SOURCE_DATE_EPOCH=1683558580
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 -m build --wheel --skip-dependency-check --no-isolation
 pushd ../buildavx2/
