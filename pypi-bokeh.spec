@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-bokeh
-Version  : 3.1.1
-Release  : 65
-URL      : https://files.pythonhosted.org/packages/03/5d/978f7a4824d26f9f729347142d01bc4bf12e49027d96163d9b428a9aabda/bokeh-3.1.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/03/5d/978f7a4824d26f9f729347142d01bc4bf12e49027d96163d9b428a9aabda/bokeh-3.1.1.tar.gz
+Version  : 3.2.0
+Release  : 66
+URL      : https://files.pythonhosted.org/packages/4c/53/eb210bdd1c9955c10c8f22d1a085c57af8832dc3a6756bfe7b96d401f5e2/bokeh-3.2.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/4c/53/eb210bdd1c9955c10c8f22d1a085c57af8832dc3a6756bfe7b96d401f5e2/bokeh-3.2.0.tar.gz
 Summary  : Interactive plots and applications in the browser from Python
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -75,10 +75,10 @@ python3 components for the pypi-bokeh package.
 
 
 %prep
-%setup -q -n bokeh-3.1.1
-cd %{_builddir}/bokeh-3.1.1
+%setup -q -n bokeh-3.2.0
+cd %{_builddir}/bokeh-3.2.0
 pushd ..
-cp -a bokeh-3.1.1 buildavx2
+cp -a bokeh-3.2.0 buildavx2
 popd
 
 %build
@@ -86,7 +86,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683558580
+export SOURCE_DATE_EPOCH=1687444911
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
