@@ -7,7 +7,7 @@
 #
 Name     : pypi-bokeh
 Version  : 3.3.2
-Release  : 73
+Release  : 74
 URL      : https://files.pythonhosted.org/packages/7e/e3/a3de04dfa9a263153c87a9239057e01efe1be4aa7970ea4b7fa010c3ab10/bokeh-3.3.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/7e/e3/a3de04dfa9a263153c87a9239057e01efe1be4aa7970ea4b7fa010c3ab10/bokeh-3.3.2.tar.gz
 Summary  : Interactive plots and applications in the browser from Python
@@ -61,6 +61,16 @@ python components for the pypi-bokeh package.
 Summary: python3 components for the pypi-bokeh package.
 Group: Default
 Requires: python3-core
+Provides: pypi(bokeh)
+Requires: pypi(contourpy)
+Requires: pypi(jinja2)
+Requires: pypi(numpy)
+Requires: pypi(packaging)
+Requires: pypi(pandas)
+Requires: pypi(pillow)
+Requires: pypi(pyyaml)
+Requires: pypi(tornado)
+Requires: pypi(xyzservices)
 
 %description python3
 python3 components for the pypi-bokeh package.
