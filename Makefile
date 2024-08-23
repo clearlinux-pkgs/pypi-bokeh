@@ -1,5 +1,5 @@
 PKG_NAME := pypi-bokeh
-URL = https://files.pythonhosted.org/packages/65/b4/564c478256e853d165b49bad48d2d3525c3386a9aa135fc61ee1192efd70/bokeh-3.5.1.tar.gz
+URL = https://files.pythonhosted.org/packages/89/43/02107c6439341d2da5730c99a8765823f8743a125f83fac526233332ab18/bokeh-3.5.2.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
