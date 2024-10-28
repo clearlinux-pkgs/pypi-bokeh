@@ -7,7 +7,7 @@
 #
 Name     : pypi-bokeh
 Version  : 3.6.0
-Release  : 84
+Release  : 85
 URL      : https://files.pythonhosted.org/packages/0a/80/99ea2e9c63c9f3994ec2ff2451720de533c0b88565cb12c1a45a18556518/bokeh-3.6.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/0a/80/99ea2e9c63c9f3994ec2ff2451720de533c0b88565cb12c1a45a18556518/bokeh-3.6.0.tar.gz
 Summary  : Interactive plots and applications in the browser from Python
